@@ -755,7 +755,7 @@ def materi1():
 </body>
 </html>
     '''
-    st.components.v1.html(tulisHTML,height=4000)
+    st.components.v1.html(tulisHTML,height=8000)
 
 def materi2():
     tulisHTML='''
@@ -1558,7 +1558,7 @@ def materi2():
 </body>
 </html>
     '''
-    st.components.v1.html(tulisHTML,height=4000)
+    st.components.v1.html(tulisHTML,height=8000)
 #------------------------------------
 
 if st.session_state.kondisi['awal']:
@@ -1575,3 +1575,4 @@ if st.sidebar.button("pengenalan"):
 if st.sidebar.button("pertemuan1"):
     st.session_state['kondisi']={'awal':False, 'Pertemuan1':True}
     st.rerun()
+
