@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 if 'kondisi' not in st.session_state:
-    st.session_state['kondisi']={'awal':True, 'Pertemuan1':False}
+    st.session_state['kondisi']={'awal':True, 'Pertemuan1':False, 'Pertemuan2':False}
 
 
 #------------------------------------
@@ -1559,20 +1559,31 @@ def materi2():
 </html>
     '''
     st.components.v1.html(tulisHTML,height=8000)
+
+def materi3():
+    tulisanHTML='''
+    <iframe src="https://martin-bernard26.github.io/projekArtikel/artikel.html" style="width:100%; height:1000px"></iframe>
+    '''
+    st.components.v1.html(tulisanHTML,height=1000)
 #------------------------------------
 
 if st.session_state.kondisi['awal']:
     materi1()
 if st.session_state.kondisi['Pertemuan1']:
     materi2()
+if st.session_state.kondisi['Pertemuan2']:
+    materi3()
 
 #-------------------------------------
 
 
 if st.sidebar.button("pengenalan"):
-    st.session_state['kondisi']={'awal':True, 'Pertemuan1':False}
+    st.session_state['kondisi']={'awal':True, 'Pertemuan1':False, 'Pertemuan2':False}
     st.rerun()
 if st.sidebar.button("pertemuan1"):
-    st.session_state['kondisi']={'awal':False, 'Pertemuan1':True}
+    st.session_state['kondisi']={'awal':False, 'Pertemuan1':True, 'Pertemuan2':False}
+    st.rerun()
+if st.sidebar.button("pertemuan2"):
+    st.session_state['kondisi']={'awal':False, 'Pertemuan1':False, 'Pertemuan2':True}
     st.rerun()
 
