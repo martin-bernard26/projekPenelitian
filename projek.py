@@ -1597,8 +1597,14 @@ def materi6():
         '''
         st.components.v1.html(tulisanHTML,height=1000)
     with menu1[2]:
+        st.write("#### Media Flash Card")
         tulisanHTML='''
         <iframe src="https://martin-bernard26.github.io/projekArtikel/medai1.html" style="width:100%; height:1000px"></iframe>
+        '''
+        st.components.v1.html(tulisanHTML,height=1000)
+        st.write("#### Media Tebak-tebakan")
+        tulisanHTML='''
+        <iframe src="https://martin-bernard26.github.io/projekArtikel/media2.html" style="width:100%; height:1000px"></iframe>
         '''
         st.components.v1.html(tulisanHTML,height=1000)
 #------------------------------------
