@@ -4,7 +4,7 @@ st.set_page_config(layout="wide")
 
 if 'kondisi' not in st.session_state:
     st.session_state['kondisi']={'awal':True,'contoh':False, 'Pertemuan1':False,'Pertemuan2':False,'Pertemuan3':False,
-                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False}
+                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False,'Pertemuan8':False}
 
 
 #------------------------------------
@@ -1646,6 +1646,19 @@ def materi9():
         <iframe src="https://martin-bernard26.github.io/projekArtikel/UTS.html" style="width:100%; height:500px"></iframe>
         '''
     st.components.v1.html(tulisanHTML,height=500)
+def materi10():
+    menu = st.tabs(['Materi','Contoh Instrumen'])
+    with menu[0]:
+        tulisanHTML='''
+            <iframe src="https://martin-bernard26.github.io/projekArtikel/AIC.html" style="width:100%; height:1000px"></iframe>
+        '''
+        st.components.v1.html(tulisanHTML,height=1000)
+    with menu[1]:
+        tulisanHTML='''
+            <iframe src="https://martin-bernard26.github.io/projekArtikel/contohInstrumen.html" style="width:100%; height:1000px"></iframe>
+        '''
+        st.components.v1.html(tulisanHTML,height=1000)
+    
 #------------------------------------
 
 if st.session_state.kondisi['awal']:
@@ -1666,43 +1679,49 @@ if st.session_state.kondisi['Pertemuan6']:
     materi8()
 if st.session_state.kondisi['Pertemuan7']:
     materi9()
+if st.session_state.kondisi['Pertemuan8']:
+    materi10()
 #-------------------------------------
 
 
 if st.sidebar.button("pengenalan"):
     st.session_state['kondisi']={'awal':True,'contoh':False, 'Pertemuan1':False, 'Pertemuan2':False, 'Pertemuan3':False,
-                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False}
+                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False,'Pertemuan8':False}
     st.rerun()
 if st.sidebar.button("Cari Jurnal"):
     st.session_state['kondisi']={'awal':False,'contoh':True, 'Pertemuan1':False, 'Pertemuan2':False, 'Pertemuan3':False,
-                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False}
+                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False,'Pertemuan8':False}
     st.rerun()
 st.sidebar.markdown("---")
 if st.sidebar.button("pertemuan1"):
     st.session_state['kondisi']={'awal':False,'contoh':False, 'Pertemuan1':True,'Pertemuan2':False, 'Pertemuan3':False,
-                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False}
+                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False,'Pertemuan8':False}
     st.rerun()
 if st.sidebar.button("pertemuan2"):
     st.session_state['kondisi']={'awal':False,'contoh':False, 'Pertemuan1':False,'Pertemuan2':True, 'Pertemuan3':False,
-                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False}
+                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False,'Pertemuan8':False}
     st.rerun()
 if st.sidebar.button("pertemuan3"):
     st.session_state['kondisi']={'awal':False,'contoh':False, 'Pertemuan1':False,'Pertemuan2':False,'Pertemuan3':True,
-                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False}
+                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False,'Pertemuan8':False}
     st.rerun()
 if st.sidebar.button("pertemuan4"):
     st.session_state['kondisi']={'awal':False,'contoh':False, 'Pertemuan1':False,'Pertemuan2':False,'Pertemuan3':False,
-                                 'Pertemuan4':True,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False}
+                                 'Pertemuan4':True,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False,'Pertemuan8':False}
     st.rerun()
 if st.sidebar.button("pertemuan5"):
     st.session_state['kondisi']={'awal':False,'contoh':False, 'Pertemuan1':False,'Pertemuan2':False,'Pertemuan3':False,
-                                 'Pertemuan4':False,'Pertemuan5':True,'Pertemuan6':False,'Pertemuan7':False}
+                                 'Pertemuan4':False,'Pertemuan5':True,'Pertemuan6':False,'Pertemuan7':False,'Pertemuan8':False}
     st.rerun()
 if st.sidebar.button("pertemuan6"):
     st.session_state['kondisi']={'awal':False,'contoh':False, 'Pertemuan1':False,'Pertemuan2':False,'Pertemuan3':False,
-                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':True,'Pertemuan7':False}
+                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':True,'Pertemuan7':False,'Pertemuan8':False}
     st.rerun()
 if st.sidebar.button("Ujian Tengah Semester"):
     st.session_state['kondisi']={'awal':False,'contoh':False, 'Pertemuan1':False,'Pertemuan2':False,'Pertemuan3':False,
-                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':True}
+                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':True,'Pertemuan8':False}
+    st.rerun()
+if st.sidebar.button("Pertemuan 7"):
+    st.session_state['kondisi']={'awal':False,'contoh':False, 'Pertemuan1':False,'Pertemuan2':False,'Pertemuan3':False,
+                                 'Pertemuan4':False,'Pertemuan5':False,'Pertemuan6':False,'Pertemuan7':False,'Pertemuan8':True}
     st.rerun()
