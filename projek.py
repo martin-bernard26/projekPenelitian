@@ -1661,13 +1661,18 @@ def materi10():
         st.components.v1.html(tulisanHTML,height=1000)
 
 def materi11():
-    menu = st.tabs(['Contoh Instrumen Soal','Contoh temuan Kesulitan Siswa'])
+    menu = st.tabs(['Metode ADDIE','Contoh Instrumen Soal','Contoh temuan Kesulitan Siswa'])
     with menu[0]:
+        tulisanHTML='''
+            <iframe src="https://martin-bernard26.github.io/projekArtikel/ADDIE.html" style="width:100%; height:1000px"></iframe>
+        '''
+        st.components.v1.html(tulisanHTML,height=1000)
+    with menu[1]:
         tulisanHTML='''
             <iframe src="https://drive.google.com/file/d/1xMJEByS3PhVopmjAjecYoJM9uQzMquT0/preview" style="width:100%; height:1000px"></iframe>
         '''
         st.components.v1.html(tulisanHTML,height=1000)
-    with menu[1]:
+    with menu[2]:
         tulisanHTML='''
             <iframe src="https://drive.google.com/file/d/135Gp8NtWiYjLk7MzZn7lECmnfJG8IMLp/preview" style="width:100%; height:1000px"></iframe>
         '''
