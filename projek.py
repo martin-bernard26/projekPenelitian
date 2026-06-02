@@ -1589,7 +1589,7 @@ def materi6():
     menu1 = st.tabs(['Media Pembelajaran','Pengembangan Media R&D','Contoh'])
     with menu1[0]:
         tulisanHTML='''
-        <iframe src="https://martin-bernard26.github.io/projekArtikel/projek1.html" style="width:100%; height:1000px"></iframe>
+        <iframe style="background-color:white" src="https://martin-bernard26.github.io/projekArtikel/projek1.html" style="width:100%; height:1000px"></iframe>
         '''
         st.components.v1.html(tulisanHTML,height=1000)
     with menu1[1]:
