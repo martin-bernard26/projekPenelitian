@@ -1664,7 +1664,7 @@ def materi11():
     menu = st.tabs(['Metode ADDIE','Contoh Instrumen Soal','Contoh temuan Kesulitan Siswa'])
     with menu[0]:
         tulisanHTML='''
-            <div style="background-color:yellow">
+            <div style="background-color:orange;color:black">
             <iframe src="https://martin-bernard26.github.io/projekArtikel/ADDIE.html" style="width:100%; height:1000px"></iframe>
             </div>
         '''
