@@ -1679,10 +1679,17 @@ def materi11():
         st.components.v1.html(tulisanHTML,height=1000)
 
 def materi12():
-    tulisanHTML='''
+    menu = st.tabs(['Beban Kognitif','Memori Otak Kerja'])
+    with menu[0]:
+        tulisanHTML='''
             <iframe src="https://drive.google.com/file/d/12nRSgRhXNhmAwOTiAb7l3jZMe7uGOlWh/preview" style="width:100%; height:1000px"></iframe>
-        '''
-    st.components.v1.html(tulisanHTML,height=1000)
+            '''
+        st.components.v1.html(tulisanHTML,height=1000)
+    with menu[1]:
+        tulisanHTML='''
+            <iframe src="https://drive.google.com/file/d/1PG-qT0QgL5CtpbFMrzWe9xyefrkHyBDg/preview" style="width:100%; height:1000px"></iframe>
+            '''
+        st.components.v1.html(tulisanHTML,height=1000)
     
 #------------------------------------
 
